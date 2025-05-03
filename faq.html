@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R7 - الأسئلة الشائعة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"R7</div>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="rules.html">القوانين</a></li>
+            <li><a href="store.html">المتجر</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="faq.html" class="active">الأسئلة الشائعة</a></li>
+        </ul>
+    </nav>
+    <main class="main-content">
+        <h1>الأسئلة الشائعة</h1>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>كيف يمكنني شراء المنتجات؟</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>يمكنك شراء المنتجات عن طريق الضغط على المنتج المطلوب وفتح تذكرة الشراء. سيتم التواصل معك قريباً لإتمام عملية الشراء.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>ما هي طرق الدفع المتاحة؟</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>نحن نقبل الدفع عن طريق فتح التذاكر فقط. سيتم إرسال تفاصيل الدفع لك عند فتح التذكرة.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>كم تستغرق عملية التسليم؟</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>عادةً ما يتم تسليم المنتجات خلال 24 ساعة من تأكيد الدفع. قد تختلف المدة حسب المنتج والطلب.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>هل يمكنني استرداد المبلغ بعد الشراء؟</h3>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>جميع المنتجات غير قابلة للاسترداد بعد الشراء. نرجو التأكد من قراءة وصف المنتج جيداً قبل الشراء.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        جميع الحقوق محفوظة © BX 2025
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.toggle-icon');
+                
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.textContent = '+';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.textContent = '-';
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
